@@ -36,6 +36,15 @@
 	<rule ref="Squiz.Commenting.FunctionCommentThrowTag" />
 	<rule ref="Squiz.Commenting.ClassComment" />
 
+        <!-- Configure for disallowing some functions -->
+        <rule ref="Generic.PHP.ForbiddenFunctions">
+        	<properties>
+        		<property name="forbiddenFunctions" type="array"
+				  value="call_user_func=>null, call_user_func_array=>null, forward_static_call=>null, forward_static_call_array=>null" />
+        		<property name="error" value="true" />
+        	</properties>
+        </rule>
+
 	<!-- Configure for tabs -->
 	<!-- <arg name="tab-width" value="4"/>
 	<rule ref="Generic.WhiteSpace.DisallowSpaceIndent"/>
